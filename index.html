@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CivicTrack – Report Civic Issues</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Splash -->
+  <div id="splash">
+    <div class="splash-content">
+      <h1>CivicTrack</h1>
+      <p>Track & report civic issues in your area</p>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <img src="civil.png" alt="CivicTrack Logo" class="hero-logo">
+      <h2>Welcome to CivicTrack</h2>
+      <p>Track, report & resolve civic issues easily</p>
+    </div>
+  </section>
+
+  <!-- Header with dark mode toggle -->
+  <header class="fade-in">
+    <div>
+      <h1>CivicTrack</h1>
+      <p>Report and track civic issues in your area</p>
+    </div>
+    <label class="switch">
+      <input type="checkbox" id="darkModeToggle">
+      <span class="slider"></span>
+    </label>
+  </header>
+
+  <main>
+    <!-- Filter & search -->
+    <section class="filter-search fade-in">
+      <input type="text" id="searchInput" placeholder="🔍 Search by title or location">
+      <select id="filterCategory">
+        <option value="">All Categories</option>
+        <option value="Pothole">Pothole</option>
+        <option value="Garbage">Garbage</option>
+        <option value="Streetlight">Streetlight</option>
+        <option value="Water leakage">Water leakage</option>
+        <option value="Other">Other</option>
+      </select>
+    </section>
+
+    <!-- Counters -->
+    <section class="stats fade-in">
+      <div>New: <span id="countNew">0</span></div>
+      <div>In Progress: <span id="countProgress">0</span></div>
+      <div>Resolved: <span id="countResolved">0</span></div>
+    </section>
+
+    <!-- Form -->
+    <section class="form-section fade-in">
+      <h2>Report an Issue</h2>
+      <form id="issueForm">
+        <input type="text" id="title" placeholder="User Name" required>
+        <textarea id="description" placeholder="Describe the issue..." required></textarea>
+        <select id="category" required>
+          <option value="">Select category</option>
+          <option value="Pothole">Pothole</option>
+          <option value="Garbage">Garbage</option>
+          <option value="Garbage">Traffic</option>
+          <option value="Garbage">Pollution</option>
+          <option value="Streetlight">Streetlight</option>
+          <option value="Water leakage">Water leakage</option>
+          <option value="Other">Other</option>
+        </select>
+        <select id="location" required>
+          <option value="">Select location</option>
+          <option value="Sector 17, Chandigarh">Sector 17, Chandigarh</option>
+          <option value="Sector 22, Chandigarh">Sector 22, Chandigarh</option>
+          <option value="Sector 35, Chandigarh">Sector 35, Chandigarh</option>
+          <option value="Sector 43, Chandigarh">Sector 43, Chandigarh</option>
+          <option value="Sector 17, Chandigarh">Sector 44, Chandigarh</option>
+          <option value="Sector 22, Chandigarh">Sector 20, Chandigarh</option>
+          <option value="Sector 35, Chandigarh">Sector 37, Chandigarh</option>
+          <option value="Sector 43, Chandigarh">Sector 47, Chandigarh</option>
+          <option value="Other">Other</option>
+        </select>
+        <input type="file" id="image" accept="image/*">
+        <div id="previewContainer" class="preview"></div>
+        <button type="submit">Submit Issue</button>
+        <p id="successMsg" class="success-msg">✅ Issue submitted!</p>
+      </form>
+    </section>
+
+    <!-- Issues list -->
+    <section class="list-section fade-in">
+      <h2>Submitted Issues</h2>
+      <div id="issueList" class="cards"></div>
+    </section>
+  </main>
+
+  <!-- About -->
+  <section class="about fade-in">
+    <h2>About CivicTrack</h2>
+    <p>CivicTrack helps people quickly report and track local issues like potholes, garbage, and streetlight problems — so we can all work together to make our area better.</p>
+  </section>
+
+  <!-- Footer -->
+  <!-- <footer>
+    <p>Made With ❤️ by Mukul Anand</p>
+    <div class="social">
+      <a href="#">Twitter</a> | <a href="#">GitHub</a> | <a href="#">Contact</a>
+    </div>
+  </footer> -->
+  <footer>
+  <p>Made With ❤️ by Mukul Anand</p>
+  <div class="social">
+    <a href="https://x.com/MukulAnand001?t=g7CKaMlWZI5oBvY4X0WgOg&s=09" target="_blank">Twitter</a> | 
+    <a href="https://github.com/Mukulanand021" target="_blank">GitHub</a> | 
+    <a href="https://www.linkedin.com/in/mukul-anand-12480b281?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Contact</a>
+  </div>
+</footer>
+
+
+  <!-- Image modal -->
+  <div id="imageModal" class="modal">
+    <span id="modalClose" class="modal-close">&times;</span>
+    <img id="modalImg" class="modal-content">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
